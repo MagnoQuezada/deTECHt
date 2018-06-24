@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/portada.png);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.Logo{
+  text-align: center;
+  margin-top: 7%;
+}
+
+#map {
+  height: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.boton_personalizado{
+  text-decoration: none;
+  display: block;
+  margin-top: 2%;
+  margin-right: 39%;
+  margin-left: 39%;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #b71c1c;
+  border-radius: 15px;
+  border: 2px solid #b71c1c;
+}
+
+

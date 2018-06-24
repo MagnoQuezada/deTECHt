@@ -1,9 +1,7 @@
-/*!
- * Materialize v1.0.0-beta (http://materializecss.com)
- * Copyright 2014-2017 Materialize
- * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
- */
-/*Zaragoza: {
+/*
+var map 
+var citymap = {
+  Zaragoza: {
     center: {lat: 19.382585, lng: -99.031457},
   },
   Camioneros: {
@@ -15,9 +13,56 @@
   Circunvalación: {
     center: {lat: 19.367240, lng: -99.040332},
   }
-  */
+};
 
+function initMap() {
+  // Create the map.
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: {lat: 19.366698, lng: -99.042333},
+    mapTypeId: 'terrain'
+  });
 
+  for (var city in citymap) {
+    // Add the circle for this city to the map.
+    var cityCircle = new google.maps.Circle({
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      //map: map,
+      //center: citymap[city].center,
+      radius: 10
+    });
+  }
+}
+*/
+
+ var map;
+  var cityCircle;
+  
+  function initMap() {
+  
+    map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 19.366698, lng: -99.042333},
+    
+    zoom: 8
+    });
+
+    cityCircle = new google.maps.Circle({
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35,
+    map: map,
+    center: {lat: 19.366698, lng: -99.042333},
+    radius: 10, //En metros
+    });
+  }
+
+  
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
