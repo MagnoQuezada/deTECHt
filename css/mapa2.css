@@ -1,0 +1,21 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/rutaproblematica.png);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.boton{
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 550px;
+  margin-left: 1100px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #b71c1c;
+  border-radius: 15px;
+  border: 2px solid #b71c1c;
+}
