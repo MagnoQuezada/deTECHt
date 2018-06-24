@@ -3,13 +3,20 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-var map;
-  function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: -34.397, lng: 150.644},
-  zoom: 8
-  });
-}
+/*Zaragoza: {
+    center: {lat: 19.382585, lng: -99.031457},
+  },
+  Camioneros: {
+    center: {lat: 19.379061, lng: -99.041550},
+  },
+  Montada: {
+    center: {lat: 19.372776, lng: -99.040343},
+  },
+  Circunvalación: {
+    center: {lat: 19.367240, lng: -99.040332},
+  }
+  */
+
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
